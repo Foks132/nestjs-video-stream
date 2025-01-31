@@ -14,7 +14,7 @@ export class AppController {
   @Get()
   async getPlayerPage(@Res() res: Response) {
     await this.videoService.streamVideo();
-    const filePath = path.resolve(process.cwd(), 'public', 'index.html');
-    res.sendFile(filePath);
+    const filePagePath = path.resolve(process.cwd(), 'public', 'index.html');
+    res.sendFile(filePagePath);
   }
 }

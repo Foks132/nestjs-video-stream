@@ -5,7 +5,7 @@ import { VideoModule } from './video/video.module';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [VideoModule, ConfigModule.forRoot()],
+  imports: [VideoModule, ConfigModule.forRoot({ isGlobal: true })],
   controllers: [AppController],
   providers: [AppService],
 })
